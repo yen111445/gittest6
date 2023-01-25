@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊頁</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            background: url(./images/background3.jpg)no-repeat center center / cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .register {
+            margin-top: 8%;
+            width: 480px;
+            height: 550px;
+            border-radius: 10px;
+            box-shadow: 0 0 60px #000;
+            /* 毛玻璃效果 */
+            backdrop-filter: blur(2.5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form {
+            width: 400px;
+            color: #fff;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+        .form h2 {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid#fff;
+        }
+        
+        .form .group {
+            margin-bottom: 20px;
+        }
+        
+        .form label {
+            line-height: 2;
+        }
+        
+        .form input {
+            width: 100%;
+            border: 1px solid #aaa;
+            line-height: 3;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .form .btn-group {
+            font-size: 0;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+        
+        .form .btn {
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #6ab4fe;
+            width: 190px;
+            padding: 10px 0;
+            color: #fff;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+        .form .btn+.btn {
+            margin-left: 20px;
+        }
+        
+        .form span {
+            display: flex;
+            justify-content: space-between;
+            justify-items: center;
+        }
+        
+        .form a {
+            color: #fff;
+            /* 把li字體原本底線砍掉 */
+            text-decoration: none;
+        }
+        
+        @media (max-width:580px) {
+            .register {
+                margin-top: 23%;
+                width: 85vw;
+                height: 80vh;
+                border-radius: 10px;
+                box-shadow: 0 0 60px #000;
+                /* 毛玻璃效果 */
+                backdrop-filter: blur(2.5px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .form .btn {
+                font-size: 12px;
+                border-radius: 5px;
+                border: none;
+                background-color: #6ab4fe;
+                width: 100px;
+                height: 35px;
+                padding: 2px 0;
+                color: #fff;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+            .form .btn+.btn {
+                margin-left: 5px;
+            }
+            .form .btn-group {
+                display: flex;
+                justify-content: space-around;
+                font-size: 0;
+                margin-top: 4%;
+                padding-top: 4%;
+            }
+            .form input {
+                width: 65vw;
+                border: 1px solid #aaa;
+                line-height: 2;
+                margin-top: 3%;
+                border-radius: 5px;
+                margin-bottom: 4%;
+            }
+            .form h2 {
+                margin-bottom: 5%;
+                padding-bottom: 5%;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px solid#fff;
+            }
+            .form label {
+                line-height: 2;
+                font-size: 15px;
+                margin-left: 8px;
+            }
+            .form a {
+                margin: 0 15px 0 15px;
+                font-size: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_a">
+            <img src="/images/rice_logo.png">
+            <a href="index.html" class="logo">俊彥的Side Project</a>
+        </div>
+        <!-- fa-bars是從Font Awesome來的  記得去cdn找-->
+        <!-- 響應是網站的漢堡 -->
+        <div id="menu-bar" class="fas fa-bars"> </div>
+        <nav class="navbar">
+            <a href="/index.html#home">本周主打</a>
+            <a href="/index.html#category">模型</a>
+            <a href="/index.html#menu">販售種類</a>
+            <a href="/index.html#order">意見箱</a>
+        </nav>
+    </header>
+    <!-- 會員登入區域 -->
+    <div class="register">
+        <form class="form">
+            <h1>註冊</h1>
+            <br>
+            <div class="group">
+                <hr>
+            </div>
+            <div class="group">
+                <input type="mail" name="mail" value="" placeholder="輸入信箱">
+                <input type="mail" name="mail" value="" placeholder="再次確認信箱">
+                <br>
+                <input type="password" name="password" value="" panel placeholder="輸入密碼">
+                <br>
+                <input type="password" name="pwcheck" value="" panel placeholder="再次輸入密碼">
+                <br>
+                <br>
+                <hr>
+            </div>
+            <span><a href="./index.html">返回主頁面<a href="#"></a></a></span>
+            <div class="btn-group">
+                <button class="btn" onclick="alert('註冊成功')">註冊</button>
+                <button class="btn">取消</button>
+            </div>
+
+
+        </form>
+
+
+
+
+    </div>
+    <script>
+    </script>
+
+    </section>
+    <!-- 連js -->
+    <script src="js/script.js">
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模型訂購作品集</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Css連結 -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        dialog {
+            border: 2px solid red;
+            box-shadow: 0 5px 6px rgb(46, 42, 42);
+            border-radius: 10px;
+            width: 330px;
+            height: 390px;
+            /* 上左下右 */
+            /* margin: 8% 15% 40% 5%; */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .Login_title {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        header .navbar .Login_Style h1 {
+            margin-top: 3%;
+            font-size: 30PX;
+            margin-left: 1%;
+        }
+        
+        .Login_Style {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-content: center;
+            flex-wrap: wrap;
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+        
+        .Login_Footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        header .navbar .Login_Footer input {
+            font-size: 28px;
+            border-radius: 3px;
+        }
+        
+        header .navbar .Login_Style input {
+            padding: 2%;
+            border-radius: 8px;
+            margin: 0 2% 0 2%;
+        }
+        
+        hr {
+            margin: 0 2% 0 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第一區 -->
+    <header>
+        <div class="logo_a">
+            <img src="/images/rice_logo.png">
+            <a href="#" class="logo">俊彥的Side Project</a>
+        </div>
+        <!-- fa-bars是從Font Awesome來的  記得去cdn找-->
+        <!-- 響應是網站的漢堡 -->
+        <div id="menu-bar" class="fas fa-bars"> </div>
+        <nav class="navbar">
+            <a href="#home">本周主打</a>
+            <a href="#category">模型</a>
+            <a href="#menu">販售種類</a>
+            <a href="#order">意見箱</a>
+            <a href="./register.html">會員註冊</a>
+            <!-- 登入內框-->
+            <a href="#"><span id="show">會員登入</span>
+                <dialog id="infoModal">
+                    <p style="position: fixed;
+                    top: 4.5%;
+                    left: 95%;
+                    transform: translate(-50%, -50%);"><button style=" padding: 3px 7px 3px 7px ; border: 3px solid red; border-radius: 3px;" id="close">X</button></p>
+
+             <form class="" action="" method="post">
+                <div class="Login_Style">
+                <h1>登入</h1>
+                 <br>
+                 <hr>
+                 <br>
+                    <input type="mail" name="mail" value="" placeholder="輸入信箱">
+                    <br>
+                    <input type="password" name="password" value=""panel placeholder="輸入密碼">
+                    <br>
+                    <input type="password" name="pwcheck" value=""panel placeholder="再次輸入密碼">
+                    <br>  
+                    
+                    <hr>
+            </div>
+
+
+            <div class="Login_Footer">
+                <span>還沒註冊?</span>
+                <input type="submit" name="" value="登入" onclick="alert('查無此會員')">
+            </div>
+            </div>
+
+            </dialog>
+            </a>
+            </form>
+            </div>
+
+
+            <!-- 登入內框-->
+            <script>
+                let btn = document.querySelector("#show");
+                let infoModal = document.querySelector("#infoModal");
+                let close = document.querySelector("#close");
+                btn.addEventListener("click", function() {
+                    infoModal.showModal();
+                })
+                close.addEventListener("click", function() {
+                    infoModal.close();
+                })
+            </script>
+            <!-- 登入 -->
+
+
+        </nav>
+    </header>
+
+
+    <!-- 第二區首頁 -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>新人類模型王</h3>
+            <p>MB命運鋼彈，立即下單</p>
+            <a href="#" class="btn" onclick="alert('目前尚未開始販售')">立即訂購</a>
+        </div>
+        <img src="images/pork_rice.png" alt="" class="">
+    </section>
+
+
+    <!-- 第三區模型種類-->
+
+    <section class="category" id="category">
+        <h1 class="heading">模型<span>種類</span></h1>
+        <div class="box-container">
+
+            <!-- 第一個種類 -->
+            <div class="box">
+                <!-- 滑過去圖片切換 -->
+                <img class="image" src="images/Pvc_Type1.jpg">
+                <div class="content">
+                    <img src="images/Sales_type1.png">
+                    <h3>機器人</h3>
+                    <p>眾多比例大小機器人模型</p>
+                </div>
+            </div>
+
+            <!-- 第二個種類 -->
+            <div class="box">
+                <!-- 滑過去圖片切換 -->
+                <img class="image" src="images/Pvc_Type2.jpg">
+                <div class="content">
+                    <img src="images/Sales_type2.png">
+                    <h3>動漫PVC</h3>
+                    <p>各種模型大廠預購.現貨販售</p>
+                </div>
+            </div>
+
+
+            <!-- 第三個種類 -->
+            <div class="box">
+                <!-- 滑過去圖片切換 -->
+                <img class="image" src="images/Pvc_Type3.jpg">
+                <div class="content">
+                    <img src="images/Sales_type3.png">
+                    <h3>Q版黏土人</h3>
+                    <p>超Q黏土人預購及販售</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 第四區 menu-->
+    <section class="menu" id="menu">
+        <h1 class="heading">新年<span>福袋</span></h1>
+        <div class="box-container">
+            <!-- 一號福袋 -->
+            <div class="box">
+                <span class="price">$499</span>
+                <img src="images/1_lucky bag.jpg">
+                <h3>一號福袋</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <!-- 空白星星>>>far -->
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn2" onclick="alert('目前尚未開始販售')">訂購</a>
+                <div class="icons">
+                    <a href="" class="fas fa-heart" onclick="alert('會員主頁暫時維護中...')"></a>
+                    <a href="" class="fas fa-share" onclick="alert('會員主頁暫時維護中...')"></a>
+                    <a href="" class="fas fa-eye" onclick="alert('會員主頁暫時維護中...')"></a>
+                </div>
+            </div>
+
+            <!-- 二號福袋-->
+            <div class="box">
+                <span class="price">$799</span>
+                <img src="images/2_lucky bag.jpg">
+                <h3>二號福袋</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <!-- 空白星星>>>far -->
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn2" onclick="alert('目前尚未開始販售')">訂購</a>
+                <div class="icons">
+                    <a href="" class="fas fa-heart" onclick="alert('會員主頁暫時維護中...')"></a>
+                    <a href="" class="fas fa-share" onclick="alert('會員主頁暫時維護中...')"></a>
+                    <a href="" class="fas fa-eye" onclick="alert('會員主頁暫時維護中...')"></a>
+                </div>
+            </div>
+
+            <!-- 三號福袋 -->
+            <div class="box">
+                <span class="price">$1799</span>
+                <img src="images/3_lucky bag.jpg">
+                <h3>三號福袋</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <!-- 空白星星>>>far -->
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn2" onclick="alert('目前尚未開始販售')">訂購</a>
+                <div class="icons">
+                    <a href="" class="fas fa-heart" onclick="alert('會員主頁暫時維護中...')"></a>
+                    <a href="" class="fas fa-share" onclick="alert('會員主頁暫時維護中...')"></a>
+                    <a href="" class="fas fa-eye" onclick="alert('會員主頁暫時維護中...')"></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 第五區 意見箱-->
+    <section class="order" id="order">
+        <h1 class="heading">意見<span>箱</span></h1>
+        <div class="box-container">
+            <div class="row">
+                <div class="image">
+                    <img src="images/order_background.jpg">
+                </div>
+                <!-- 表單 -->
+                <form action="">
+                    <div class="inputbox">
+                        <input type="text" placeholder="姓名">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="inputbox">
+                        <input type="number" placeholder="電話">
+                        <input type="text" placeholder="問題種類">
+                    </div>
+                    <!-- 資料庫用到 -->
+                    <textarea name="" id="" cols="30" rows="10">
+                    </textarea>
+                    <input type="submit" value="提交" class="btn3" onclick="alert('提交成功')">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第六區 Footer-->
+    <section class=" footer " id="footer ">
+
+    </section>
+    <!-- 連js -->
+    <script src="js/script.js ">
+    </script>
+</body>
+
+</html>
